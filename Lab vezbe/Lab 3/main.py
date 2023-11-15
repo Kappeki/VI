@@ -50,7 +50,7 @@ def find_path(graph, start, through, end):
     path2 = dfs(graph, through, end)
 
     if not path1 or not path2:
-        return None
+        return "Ne postoji put"
 
     return path1 + path2[1:]
 
@@ -87,4 +87,4 @@ if __name__ == '__main__':
         'N': ['L']
     }
 
-    print(find_path(zadati_graf, 'A', 'L', 'L'))
+    print(find_path(zadati_graf, 'A', 'L', 'B'))
